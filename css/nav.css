@@ -37,6 +37,7 @@ li{
 .jscolor,#anadir,#borrar{
     width: 30px;
     margin-top: 23px;
+    outline: 0px;
 }
 
 .jscolor{

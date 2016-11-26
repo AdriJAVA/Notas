@@ -1,7 +1,8 @@
 var indice = 0;
+
 function nota(aleatorioTop,aleatorioLeft){
     
-         indice++;
+        indice++;
         
         var nota = document.createElement("DIV");
     
@@ -29,11 +30,27 @@ function nota(aleatorioTop,aleatorioLeft){
     
         chincheta.className = "chincheta";
     
+        var check = document.createElement("INPUT");
+    
+        check.setAttribute("type", "checkbox");
+    
+        check.id = "checkbox" + indice;
+    
+        check.className = "check";
+    
+        var label = document.createElement("LABEL");
+    
+        label.htmlFor = "checkbox" + indice;
+            
         nota.appendChild(textarea);
     
         nota.appendChild(parrafo);
         
         nota.appendChild(chincheta);
+    
+        nota.appendChild(check);
+    
+        nota.appendChild(label);
     
         nota.style.top =  aleatorioTop + "px";
 
@@ -52,6 +69,7 @@ function nota(aleatorioTop,aleatorioLeft){
         }
         
         chincheta.onclick = function(){
+            eliminarMargen(nota.style.top,nota.style.left);
             document.body.removeChild(nota);
         }
     

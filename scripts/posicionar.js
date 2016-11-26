@@ -13,12 +13,13 @@ function anadirDiv(){
         
         var coincide = false;
         
-        var aleatorioTop = Math.floor(Math.random()*(alturaPantalla-200)-200) + 235;
+        var aleatorioTop = Math.floor(Math.random()*(alturaPantalla-200)-200) + 200;
         
         var aleatorioLeft =  Math.floor(Math.random()*(anchuraPantalla-200)-200) + 200;
         
         if(margenes.length == 0){
             margenes.push([aleatorioTop,aleatorioLeft]);
+            break;
         }else{
             for(var i = 0; i < margenes.length; i++){
 
@@ -41,3 +42,18 @@ function anadirDiv(){
         }
     nota(aleatorioTop,aleatorioLeft);
 }
+
+function eliminarMargen(margenTop,margenLeft){
+    var fila;
+    for(var i = 0; i < margenes.length; i++){
+            if(margenTop == margenes[i][0] + "px" && margenLeft == margenes[i][1] + "px"){
+               margenes[i][0] = 9999;
+                margenes[i][1] = 9999;
+                break;
+            }
+        }
+
+    
+    
+    }
+    

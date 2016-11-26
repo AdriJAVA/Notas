@@ -9,6 +9,8 @@
     <script type="text/javascript" src="scripts/jscolor.js"></script>
     <script type="text/javascript" src="scripts/nota.js"></script>
     <script type="text/javascript" src="scripts/posicionar.js"></script>
+    <script type="text/javascript" src="scripts/funcionesadicionales.js"></script>
+    
 
     <title>Notas</title>
 </head>
@@ -18,7 +20,7 @@
         <ul>
             <li><input type="image" id="anadir" src="Iconos/anadir.png"></li>
             <li><input type="image" id="borrar" src="Iconos/borrar.png"></li>
-            <li><input type="image" id="color" class="jscolor" value="ab2567" disabled></li>
+            <li><input type="image" id="color" class="jscolor {onFineChange:'cambiarColor(this)'} " value="ab2567" disabled></li>
         </ul>
     </nav>
 </body>
