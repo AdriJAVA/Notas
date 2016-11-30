@@ -7,7 +7,7 @@ body{
     background: orange;
 }
 nav{
-    width: 300px;
+    width: 400px;
     height: 65px;
     background-color: lightskyblue;
     margin: -55px auto;
@@ -22,7 +22,7 @@ nav:hover{
 }
 
 ul{
-    width: 300px;
+    width: 400px;
     height: 60px;
 }
 li{
@@ -34,7 +34,7 @@ li{
 }
 
 
-.jscolor,#anadir,#borrar{
+.jscolor,#anadir,#borrar,#camara{
     width: 30px;
     margin-top: 23px;
     outline: 0px;
@@ -46,4 +46,11 @@ li{
     font-size: 0; 
     border: 0;
     background-size: 0px;
+}
+
+html,body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
 }

@@ -23,4 +23,18 @@ function borrarTodo(){
     for(var i = notas.length-1; i >= 0; i--){
         document.body.removeChild(notas[i]);
          }
+    eliminarTodo();
 }
+
+
+function hacerPantallazo(){
+    html2canvas(document.body, {
+        onrendered: function (canvas) {
+        var img = canvas.toDataURL("image/png");
+        var enlace = document.getElementById("descargar");
+        enlace.href = img;
+        enlace.download = "notas.png";
+        enlace.click();
+      
+      },
+    })};

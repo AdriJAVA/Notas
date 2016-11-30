@@ -1,12 +1,14 @@
 
 var margenes = [];
 
-function anadirDiv(){
+function anadirDiv(){   
     
     var anchuraPantalla = window.innerWidth;
     
     var alturaPantalla = window.innerHeight;
-        
+    
+    algoritmoMax(anchuraPantalla,alturaPantalla);
+            
     var seguir = true;
     
     while(seguir){
@@ -41,6 +43,7 @@ function anadirDiv(){
         }
         }
     nota(aleatorioTop,aleatorioLeft);
+    console.log(margenes);
 }
 
 function eliminarMargen(margenTop,margenLeft){
@@ -52,8 +55,17 @@ function eliminarMargen(margenTop,margenLeft){
                 break;
             }
         }
-
-    
-    
     }
+
+function eliminarTodo(){
+    margenes = [];
+}
+
+function algoritmoMax(anchura,altura){
+    var maxAncho = Math.floor(anchura/200);
+    
+    var maxAltura = Math.floor(altura/200);
+    
+        
+}
     
